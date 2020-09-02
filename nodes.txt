@@ -1,0 +1,122 @@
+// Main Functions
+
+- Item Management
+	- Brand / Category / Subcategory
+
+- Sell / Shopping
+
+- Order Management
+	- items / customers
+	- order / order_details 
+
+- Customer Management
+	- Reports
+
+- orders
+	-voucherid, user_id, orderdate, status
+
+- order_details
+	- voucherid, product_id, qty
+
+- Brands
+	=> 1 | b1 | photo
+	=> 2 | b2 | photo
+
+- Categories
+	=> 1 | fashion | photo
+	=> 2 | electronic | photo
+
+- Subcategories
+	=> 1 | baby wear | 1
+
+ Model Relationship
+ ---------------------
+ - one-to-one
+ 	- hasOne (parent)
+ 	- belongs (child)
+
+ - one-to-many
+ 	- hasMany (parent)
+ 	- hasMany (child)
+
+ - many-to-many
+ 	- belongsToMany(p/c)
+ 	- pivote table
+---------------------------------------------------------------------------- 	
+Homework(using backend template)
+ ----------------------------------
+ 	- create route for dashboard page (get)
+ 	- create master blade(views/backendtemplate.blade.php)
+ 	- create child blade (views/backend/dashboard.blade.php)
+ 	- create controller BackendController
+ 		- create method dashboardfun()
+ 		- call view (backend.dashboard)
+
+
+
+ Item (CRUD)
+ ------------
+ create - show form , store data
+ retrive - display data (all , row)
+ update - show form with old value , update data
+ delete - delete data
+
+
+ Zoom Note
+ ------------
+  - Order Insert (detail)
+  - route (web.php)
+  - create checkout btn in shopping cart page (buy_now)
+  - External js (click checkout) (.buy_now)
+  - OrderController => store
+
+
+
+ Authentication
+ -----------------
+ - installtion
+   - nodejs (call npm in terminal)
+
+   - windows
+     - nodejs.org (lts) 
+
+   - cmd=>node --version
+   - npm -v
+
+
+ - Laravel Docs
+   - Security / Authentication
+ - Commands
+   - composer require laravel/ui
+   - php artisan ui bootstrap --auth
+   - npm install(for bootstrap on/ get node module)
+   - npm run dev (ready state)
+ - Routes
+   - localhost:8000/login
+   - localhost:8000/register
+
+
+  Spatie
+  -------
+   - composer require()
+   - public (step 5)
+   - php artisan migrate
+   - create new seeder class(RoleTableSeeder)
+   - seed this class
+   - User model->use HasRoles
+   - app/Http/Controller/Auth/RegisterController
+      - create method ->assignRole
+   - Register middleware(app/HTTP/kerrnel.php)
+   - routes/web.php
+   - role:Admin
+
+
+
+  GIT
+  ---
+  - git init
+  - git add
+  - git commit -m "message"
+  - git remote add origin url
+  - git push -u origin master
+  - git pull
